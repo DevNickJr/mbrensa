@@ -7,6 +7,7 @@ export default function Home() {
       <Text>Open up App.js to start working on your apptughg!</Text>
       <Text className="mt-2 font-bold text-gray-400 text-md">
             Open up App.js to start working on your app!
+            test
         </Text>
       <StatusBar style="auto" />
     </View>
