@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         primary: '#02054C',
         secondary: '#F4C20B',
+        darkwood: '#482417',
       },
     },
   },
