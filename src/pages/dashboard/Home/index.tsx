@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TextInput, ImageBackground } from 'react-native';
 import Button from 'components/Button'
 
 
@@ -12,23 +12,38 @@ export default function Home({ navigation, ...rest }: any ) {
   // 
   
   return (
-    <View style={styles.container} className='p-4 py-20 bg-primary'>
-        <View className='flex items-center justify-center mb-10'>
-            <Text className="mt-2 text-3xl font-bold text-secondary">
-                Mbrensa
-            </Text>
+    <View style={styles.container} className='flex bg-primary'>
+      <ImageBackground source={require('../../../assets/app-bg.png')} className='w-full h-full' style={{width: '100%', height: '100%'}}>
+        <View className="flex-1 p-4">
+            <View className='flex-row items-center justify-between mb-12 space-x-4'>
+              <Text className='text-sm font-bold text-secondary'>Current Tournament Time </Text>
+              <View className='flex-row space-x-2'>
+                  <Text className='text-xl font-semibold leading-4 text-darkwood p-1.5 rounded-md bg-amber-500'>07</Text>
+                  <Text className='text-xl font-semibold leading-4 text-darkwood p-1.5 rounded-md bg-amber-500'>45</Text>
+                  <Text className='text-xl font-semibold leading-4 text-darkwood p-1.5 rounded-md bg-amber-500'>45</Text>
+              </View>
+            </View>
+            <View className='mb-12 space-y-8'>
+              <View className='flex-row items-center justify-between p-2 space-x-2 border border-secondary rounded-xl'>
+                <Text className='text-3xl text-secondary'>8:00</Text>
+                <Button title='JOIN' onPress={() => navigation.replace('Register', { owner: 'Michaś' })} buttonStyle={"w-fit bg-darkwood rounded-md py-1 px-6"} textStyle="text-secondary text-lg"  />
+              </View>
+              <View className='flex-row items-center justify-between p-2 space-x-2 border border-secondary rounded-xl'>
+                <Text className='text-3xl text-secondary'>9:00</Text>
+                <Button title='JOIN' onPress={() => navigation.replace('Register', { owner: 'Michaś' })} buttonStyle={"w-fit bg-darkwood rounded-md py-1 px-6"} textStyle="text-secondary text-lg"  />
+              </View>
+              <View className='flex-row items-center justify-between p-2 space-x-2 border border-secondary rounded-xl'>
+                <Text className='text-3xl text-secondary'>10:00</Text>
+                <Button title='JOIN' onPress={() => navigation.replace('Register', { owner: 'Michaś' })} buttonStyle={"w-fit bg-darkwood rounded-md py-1 px-6"} textStyle="text-secondary text-lg"  />
+              </View>
+            </View>
         </View>
-        <Text className="mb-1 text-white text-md">
-            Sign up
-        </Text>
-        <View className='absolute bottom-0 left-0 flex flex-row items-center justify-between w-full px-3 py-4 space-x-5'>
-            <View className='flex flex-row items-center justify-center space-x-3'>
-                <View className='bg-gray-300 w-14 h-14' />
-                <View className='bg-gray-300 w-14 h-14' />
-                <View className='bg-gray-300 w-14 h-14' />
-            </View> 
-            <View className='bg-gray-300 w-14 h-14' />
+        <View className='flex flex-row items-center justify-between w-full px-12 py-4 space-x-5'>
+            <View className='w-8 h-8 bg-gray-300' />
+            <View className='w-8 h-8 bg-gray-300' />
+            <View className='w-8 h-8 bg-gray-300' />
         </View>
+      </ImageBackground>
       <StatusBar style="auto" />
     </View>
   );

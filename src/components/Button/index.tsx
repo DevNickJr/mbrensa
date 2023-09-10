@@ -1,18 +1,19 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Text, StyleSheet, Pressable } from 'react-native';
 
 interface IProps { 
     onPress: () => any, 
     title?: string,
     buttonStyle?: string,
-    textStyle?: string
+    textStyle?: string,
+    children?: ReactNode
 }
 
 export default function Button(props: IProps) {
-  const { onPress, buttonStyle, textStyle, title = 'Save', ...rest } = props;
+  const { onPress, buttonStyle, textStyle, title = 'Save', children, ...rest } = props;
   return (
     <Pressable {...rest} className={`items-center justify-center px-4 py-3 rounded-md bg-primary ${buttonStyle}`} onPress={onPress}>
-      <Text className={`text-white font-bold ${textStyle}`}>{title}</Text>
+      {children ? <>{children}</> : <Text className={`text-white font-bold ${textStyle}`}>{title}</Text>}
     </Pressable>
   );
 }

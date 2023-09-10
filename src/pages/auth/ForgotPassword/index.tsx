@@ -10,28 +10,20 @@ export default function Home() {
 
               <View className='flex items-center justify-center mb-10'>
                   <Text className="mt-2 text-3xl font-bold text-secondary">
-                      Email verification
+                    Forgot password
                   </Text>
               </View>
               <View  className='items-center'>
               <View  className='w-4/5 mt-6 space-y-4'>            
                   <Text className="mb-1 text-2xl font-bold text-center text-secondary">
-                      Get your code
+                    Mail Address Here
                   </Text>
                   <Text className="mb-1 text-center text-white text-md">
-                      Please enter the 4 digit code that to your email address
+                    Enter the email address associated with your account
                   </Text>
-                  <View className='flex flex-row justify-center w-full space-x-2'>
-                      <TextInput className='w-12 p-2 px-4 bg-white rounded-md' />
-                      <TextInput className='w-12 p-2 px-4 bg-white rounded-md' />
-                      <TextInput className='w-12 p-2 px-4 bg-white rounded-md' />
-                      <TextInput className='w-12 p-2 px-4 bg-white rounded-md' />
-                  </View>
-                  <Text className="mb-1 text-center text-white text-md">
-                      I didn’t receive the code? Resend
-                  </Text>
+                  <TextInput className='w-full p-3 px-3 bg-white rounded-md placeholder:text-black/60' placeholder='Email' />
               </View>
-              <Button title='Verify and Proceed' onPress={() => ''} buttonStyle='bg-secondary mt-4' textStyle='font-semibold' />
+              <Button title='Recover Password' onPress={() => ''} buttonStyle='bg-secondary mt-4' textStyle='font-normal' />
               </View>
       </ImageBackground>
       <StatusBar style="auto" />
