@@ -7,7 +7,7 @@ export default function StepOne({ navigation }: any) {
   return (
     <View style={styles.container} className='pt-20 bg-primary'>
       <View className='flex items-center justify-center mb-10 h-60'>
-          <Image source={require('../../../assets/onboard.png')} className='w-full h-full' />
+          <Image source={require('../../../assets/onboard1.png')} className='w-full h-full' />
       </View>
       <View  className='items-center justify-between flex-1 px-12 pt-6 pb-8 bg-white gap-y8 rounded-t-3xl'>
         <Text className="text-2xl font-medium text-center">

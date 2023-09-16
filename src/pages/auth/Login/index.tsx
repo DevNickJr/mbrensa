@@ -21,7 +21,7 @@ export default function Login({ navigation }: any) {
             <View className='flex flex-col space-y-4'>
                 <TextInput className='p-3 px-4 bg-white rounded-md' />
                 <TextInput className='p-3 px-4 bg-white rounded-md' />
-                <Button textStyle='text-white font-normal' title='Forgot password?' onPress={() => navigation.replace('ForgotPassword')} buttonStyle='py-0 items-end bg-transparent' /> 
+                <Button textStyle='text-white font-normal' title='Forgot password?' onPress={() => navigation.navigate('ForgotPassword')} buttonStyle='py-0 items-end bg-transparent' /> 
             </View>
              <Button title='Login' onPress={() => navigation.replace('Home', { owner: 'Michaś' })} buttonStyle='bg-secondary mt-6' />
              <View className='flex flex-col items-center mt-12 space-y-7'>

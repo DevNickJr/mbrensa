@@ -3,12 +3,12 @@ import { StyleSheet, Text, View, TextInput, ImageBackground } from 'react-native
 import Button from 'components/Button'
 // import Checkbox from 'expo-checkbox';
 
-export default function Home() {
+export default function EmailVerify({ navigation }: any) {
   return (
     <View style={styles.container} className='bg-primary'>
-      <ImageBackground source={require('../../../assets/app-bg.png')} className='w-full h-full p-4 pt-20' style={{width: '100%', height: '100%'}}>
+      <ImageBackground source={require('../../../assets/app-bg.png')} className='w-full h-full p-4 pt-10' style={{width: '100%', height: '100%'}}>
 
-              <View className='flex items-center justify-center mb-10'>
+              <View className='flex items-center justify-center mb-20'>
                   <Text className="mt-2 text-3xl font-bold text-secondary">
                       Email verification
                   </Text>
@@ -31,8 +31,9 @@ export default function Home() {
                       I didn’t receive the code? Resend
                   </Text>
               </View>
-              <Button title='Verify and Proceed' onPress={() => ''} buttonStyle='bg-secondary mt-4' textStyle='font-semibold' />
+              <Button title='Verify and Proceed' onPress={() => navigation.navigate('Home')} buttonStyle='bg-secondary mt-4' textStyle='font-semibold' />
               </View>
+              
       </ImageBackground>
       <StatusBar style="auto" />
     </View>

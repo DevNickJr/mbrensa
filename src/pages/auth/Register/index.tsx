@@ -21,7 +21,7 @@ export default function Register({ navigation }: any) {
                 <TextInput className='p-3 px-4 bg-white rounded-md' />
                 <TextInput className='p-3 px-4 bg-white rounded-md' />
                 <TextInput className='p-3 px-4 bg-white rounded-md' />
-                <Button title='Sign Up' onPress={() => navigation.replace('EmailVerify', { owner: 'Michaś' })} buttonStyle='bg-secondary' />
+                <Button title='Sign Up' onPress={() => navigation.navigate('EmailVerify', { owner: 'Michaś' })} buttonStyle='bg-secondary' />
             </View>
             <View className='flex flex-col items-center mt-12 space-y-7'>
                 <Text className='text-white/90'>Or</Text>

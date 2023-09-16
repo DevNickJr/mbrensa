@@ -19,7 +19,7 @@ export default function StepTwo({ navigation }: any) {
             <View className='w-2.5 h-2.5 bg-gray-200 rounded-full'></View>
             <View className='w-5 h-2.5 rounded-full bg-primary'></View>
           </View>
-          <Button title='Next' onPress={() => navigation.replace('Register', { owner: 'Michaś' })} buttonStyle={"w-full rounded-full mt-4"} textStyle="text-red-20"  />
+          <Button title='Get Started' onPress={() => navigation.replace('Register', { owner: 'Michaś' })} buttonStyle={"w-full rounded-full mt-4"} textStyle="text-red-20"  />
         </View>
       </View>
       <StatusBar style="auto" />

@@ -33,15 +33,14 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/* <Stack.Screen options={{ header: OnboardHeader }} name="StepOne" component={StepOne} />
+        <Stack.Screen options={{ header: OnboardHeader }} name="StepOne" component={StepOne} />
         <Stack.Screen options={{ header: OnboardHeader }} name="StepTwo" component={StepTwo}/>
-        <Stack.Screen options={{ header: OnboardHeader }} name="StepThree" component={StepThree} /> */}
+        <Stack.Screen options={{ header: OnboardHeader }} name="StepThree" component={StepThree} />
         <Stack.Screen options={{ headerShown: false }} name="Register" component={Register} />
         <Stack.Screen options={{ headerShown: false }} name="Login" component={Login} />
-        {/* <Stack.Screen options={{ headerShown: false }} name="EmailVerify" component={EmailVerify} /> */}
-        {/* <Stack.Screen options={{ headerShown: false }} name="ForgotPassword" component={ForgotPassword} /> */}
-        {/* <Stack.Screen options={{ headerShown: false }} name="Home" component={Home} /> */}
-        {/* <Stack.Screen options={{ headerShown: false }} name="Home" component={Home} /> */}
+        <Stack.Screen options={{ headerShown: false }} name="EmailVerify" component={EmailVerify} />
+        <Stack.Screen options={{ headerShown: false }} name="ForgotPassword" component={ForgotPassword} />
+        <Stack.Screen options={{ headerShown: false }} name="Home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
   );

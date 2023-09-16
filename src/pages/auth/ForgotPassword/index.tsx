@@ -3,12 +3,13 @@ import { StyleSheet, Text, View, TextInput, ImageBackground } from 'react-native
 import Button from 'components/Button'
 // import Checkbox from 'expo-checkbox';
 
-export default function Home() {
+export default function ForgotPassword({ navigation }: any) {
   return (
     <View style={styles.container} className='bg-primary'>
-      <ImageBackground source={require('../../../assets/app-bg.png')} className='w-full h-full p-4 pt-20' style={{width: '100%', height: '100%'}}>
+      <ImageBackground source={require('../../../assets/app-bg.png')} className='w-full h-full p-4 pt-10' style={{width: '100%', height: '100%'}}>
 
-              <View className='flex items-center justify-center mb-10'>
+              <View className='relative flex items-center justify-center mb-20'>
+                <Button title='<' onPress={() => navigation.goBack() } buttonStyle='absolute left-0 bg-transparent p-0 mt-4' textStyle='font-normal' />
                   <Text className="mt-2 text-3xl font-bold text-secondary">
                     Forgot password
                   </Text>
