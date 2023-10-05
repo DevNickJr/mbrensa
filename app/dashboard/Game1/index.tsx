@@ -18,7 +18,7 @@ export default function Home({ navigation, ...rest }: any ) {
         <View className='items-center justify-center'>
           <ImageBackground source={require('../../../assets/wood.png')} className='flex items-center justify-center w-full h-full p-2 pt-5' style={{width: '100%', height: '100%'}}>
             <Image source={require('../../../assets/chevron-left.png')} className='absolute w-8 h-8 left-4' />
-            <Text className='text-[#482417] text-4xl font-bold'>LEVELS</Text>
+            <Text className='text-[#482417] text-4xl font-bold'>GAME1</Text>
           </ImageBackground>
         </View>
         <View className='items-center'>
@@ -32,32 +32,25 @@ export default function Home({ navigation, ...rest }: any ) {
         </View>
         <View className="flex-1">
           <ImageBackground source={require('../../../assets/game-bg.png')} className='items-center justify-center flex-1 py-20 space-y-12' style={{width: '100%', height: '100%'}}>
-            <View className='border-4 rounded-md border-secondary'>
-              <ImageBackground source={require('../../../assets/board.png')} className='w-full h-full p-2 space-y-2 rounded-sm border-secondary' style={{width: '100%', height: '100%'}}>
-                <View className='border-4 rounded border-secondary'>
-                  <ImageBackground source={require('../../../assets/board-3.png')} className='object-cover w-full h-full px-4 py-2' style={{width: '100%', height: '100%'}}>
-                    <Text className='text-5xl text-[#482417] px-10'>3X3</Text>
-                  </ImageBackground>
-                </View>
-                <View className='border-4 rounded border-secondary'>
-                  <ImageBackground source={require('../../../assets/board-2.png')} className='items-center w-full h-full rounded-sm border-secondary '>
-                    <Text className='text-2xl font-bold text-secondary'>START</Text>
-                  </ImageBackground>
-                </View>
-              </ImageBackground>
-            </View>
-            <View className='border-4 rounded-md'>
-              <ImageBackground source={require('../../../assets/board.png')} className='w-full h-full p-2 space-y-2 rounded-sm border-secondary' style={{width: '100%', height: '100%'}}>
-                <View className='rounded border4 border-secondary'>
-                  <ImageBackground source={require('../../../assets/board-3.png')} className='object-cover w-full h-full px-4 py-2' style={{width: '100%', height: '100%'}}>
-                    <Text className='text-5xl text-[#482417] px-10'>4X3</Text>
-                  </ImageBackground>
-                </View>
-                <View className='rounded border4 border-secondary'>
-                  <ImageBackground source={require('../../../assets/board-2.png')} className='items-center w-full h-full '>
-                    <Text className='text-2xl font-bold text-secondary'>OPEN</Text>
-                  </ImageBackground>
-                </View>
+            <View className='rounded-md'>
+              <ImageBackground source={require('../../../assets/board-2.png')} className='w-full h-full space-y-1 overflow-hidden rounded-sm rounded-md border-secondary' style={{width: '100%', height: '100%'}}>
+                {
+                  [0,1,2].map(el => (
+                    <View key={el} className='flex flex-row space-x-1'>   
+                      {[0,1,2].map(el => (
+                        <View key={el} className='overflow-hidden rounded-md'>
+                          <ImageBackground source={require('../../../assets/wood.png')} className='object-cover w-full h-full p-1.5' style={{width: '100%', height: '100%'}}>
+                            <View key={el} className='overflow-hidden rounded-md'>
+                              <ImageBackground source={require('../../../assets/board-3.png')} className='object-cover w-full h-full px-4 py-2 rounded-md' style={{width: '100%', height: '100%'}}>
+                                <Text className='text-5xl text-[#482417] px-2'>1</Text>
+                              </ImageBackground>
+                            </View>
+                          </ImageBackground>
+                        </View>
+                      ))}
+                    </View>
+                  ))
+                }
               </ImageBackground>
             </View>
           </ImageBackground>
