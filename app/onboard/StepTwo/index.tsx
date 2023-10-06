@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, Image } from 'react-native';
 import Button from 'components/Button'
-import { Link } from 'expo-router';
+import { Link, router } from 'expo-router';
 
 // import Checkbox from 'expo-checkbox';
 
@@ -21,9 +21,7 @@ export default function StepTwo({ navigation }: any) {
             <View className='w-5 h-2.5 rounded-full bg-primary'></View>
             <View className='w-2.5 h-2.5 bg-gray-200 rounded-full'></View>
           </View>
-          <Link href="/onboard/StepThree">
-            <Button title='Next' onPress={() => ''} buttonStyle={"w-full rounded-full mt-4"} textStyle="text-red-20"  />
-          </Link>
+          <Button title='Next' onPress={() =>router.push("/onboard/StepThree")} buttonStyle={"w-full rounded-full mt-4"} textStyle="text-red-20"  />
         </View>
       </View>
       <StatusBar style="auto" />

@@ -7,7 +7,7 @@ const OnboardHeader = ({ navigation, route, options, back }: any) => {
 
   return (
     <View className='items-center justify-center h-12'>
-        <ImageBackground source={require('../../assets/wood.png')} className='w-full h-full p-4' style={{width: '100%', height: '100%'}}>
+        <ImageBackground source={require('../../assets/wood.png')} className='flex-1 w-full h-full' style={{width: '100%', height: '100%'}}>
         </ImageBackground>
       </View>
   );

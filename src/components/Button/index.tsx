@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Text, StyleSheet, Pressable } from 'react-native';
+import { Text, StyleSheet, Pressable, View } from 'react-native';
 
 interface IProps { 
     onPress: () => any, 
@@ -12,9 +12,9 @@ interface IProps {
 export default function Button(props: IProps) {
   const { onPress, buttonStyle, textStyle, title = 'Save', children, ...rest } = props;
   return (
-    <Pressable {...rest} className={`items-center justify-center px-4 py-3 rounded-md bg-primary ${buttonStyle}`} onPress={onPress}>
-      {children ? <>{children}</> : <Text className={`text-white font-bold ${textStyle}`}>{title}</Text>}
-    </Pressable>
+      <Pressable {...rest} className={`items-center justify-center px-4 py-3 rounded-md bg-primary ${buttonStyle}`} onPress={onPress}>
+        {children ? <>{children}</> : <Text className={`text-white font-bold ${textStyle}`}>{title}</Text>}
+      </Pressable>
   );
 }
 
